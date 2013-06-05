@@ -8,6 +8,37 @@
 
     <title>Mois du JS</title>
     <link rel="icon" type="image/png" href="css/favicon.png">
+	<script type="text/x-handlebars" data-template-name="application">
+		<header>
+			<img src="img/logo.png"/>
+			{{outlet}}
+		</header>
+	</script>
+	<script type="text/x-handlebars" data-template-name="index">
+		<div id="content">
+			<table>
+				<tr>
+					<th>Path</th>
+					<th>Method</th>
+					<th>Status</th>
+					<th>Size</th>
+					<th>Time</th>
+				</tr>
+				{{#each log in content}}
+					<tr>
+						<td>{{log.path}}</td>
+						<td>{{log.method}}</td>
+						<td>{{log.status}}</td>
+						<td>{{size log.size}}</td>
+						<td>{{log.date}}</td>
+					</tr>
+				{{/each}}
+			</table>
+		</div>
+	</script>
+	<script type="text/x-handlebars" data-template-name="detail">
+		{{log.useragent}}
+	</script>
 </head>
 <body>
 
