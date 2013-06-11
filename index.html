@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="css/favicon.png">
 	<script type="text/x-handlebars" data-template-name="application">
 		<header>
-			<img src="img/logo.png"/>
+			{{#linkTo index}}<img src="img/logo.png"/>{{/linkTo}}
 			{{outlet}}
 		</header>
 	</script>
