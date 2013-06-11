@@ -25,19 +25,21 @@
 					<th>Time</th>
 				</tr>
 				{{#each log in content}}
-					<tr>
+					{{#linkTo detail log tagName="tr"}}
 						<td>{{log.path}}</td>
 						<td>{{log.method}}</td>
 						<td>{{log.status}}</td>
 						<td>{{size log.size}}</td>
 						<td>{{log.date}}</td>
-					</tr>
+					{{/linkTo}}
 				{{/each}}
 			</table>
 		</div>
 	</script>
 	<script type="text/x-handlebars" data-template-name="detail">
-		{{log.useragent}}
+		<div id="content">
+			{{useragent}}
+		</div>
 	</script>
 </head>
 <body>

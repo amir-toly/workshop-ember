@@ -44,3 +44,4 @@ Ember.Handlebars.registerBoundHelper('size', function(value, options) {
 App.Router.map(function() {
   this.route("detail", { path: "/log/:log_id" });
 });
+
